@@ -1,0 +1,155 @@
+/* Обнуляем стандартные отступы и поля */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основной стиль для страницы */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* Ссылки */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Сетка */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col {
+    width: 25%;
+  }
+}
+
+.highlight {
+  background-color: rgba(107, 15, 156, 0.5);
+  padding: 0.5rem;
+  display: inline-block;
+  
+}
+ 
+ .centered-text {
+	 background-color: rgba(64, 224, 208, 0.6);
+	 padding: 0,5rem;
+	 max-width: 600px;
+	 
+ }
+ 
+.p {
+  margin-bottom: 20px;
+}
+
+.a {
+	margin-bottom: 40px;
+}
+
+
+.photo-container .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container .column  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  animation-name: slideshow;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slideshow {
+  0% { opacity: 1; }
+  33% { opacity: 0; }
+  66% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.photo-container .row:nth-child(1) img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.photo-container .row:nth-child(1) img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.photo-container .row:nth-child(2) img:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.photo-container .row:nth-child(2) img:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.font1 {
+background-image: url('grass.png');
+
+
+  }
+
+
